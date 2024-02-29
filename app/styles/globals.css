@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply antialiased;
+
+    scroll-behavior: smooth;
+    font-family    : var(--font-roboto);
+    background     : #06350B;
+}
+
+.font-roboto {
+    font-family: var(--font-roboto);
+}
+
+.font-lexend {
+    font-family: var(--font-lexend);
+}
+
+.bg-forest {
+    background-image : url("/forest.webp");
+    background-repeat: no-repeat;
+}
+
+.link {
+    @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[#FDB74D] hover:drop-shadow-md active:shadow-none active:text-[#FF9900] focus:text-[#91E704];
+    &.active {
+        @apply text-[#FF9900];
+    }
+}
+
+.text-h-lg {
+    @apply
+        text-4xl
+        md:text-5xl;
+}
+.text-h-md {
+    @apply
+        text-[28px] leading-[33px]
+        md:text-[32px] md:leading-[38px];
+}
+.text-h-sm {
+    @apply
+        text-[22px] leading-[26px]
+        md:text-[24px] md:leading-[28px];
+}
+.text-h-xs {
+    @apply text-[20px] leading-[24px];
+}
+
+.text-h-lg,
+.text-h-md,
+.text-h-sm,
+.text-h-xs {
+    font-family: var(--font-lexend);
+}
+
+.text-b-lg {
+    @apply text-lg leading-normal;
+}
+.text-b-md {
+    @apply text-base leading-normal;
+}
+.text-b-sm {
+    @apply text-sm leading-normal;
+}
+
+button {
+    @apply rounded-md text-black font-bold border border-transparent disabled:opacity-50 transition-all duration-300 ease-in-out bg-[#FF9900] subpixel-antialiased;
+    &:hover:not(:disabled) {
+        background: #FDB74D;
+        @apply drop-shadow-lg;
+    }
+    &:active:not(:disabled) {
+        background: #F67D00;
+        @apply shadow-none;
+    }
+    &:focus:not(:disabled) {
+        background: #FF9900;
+    }
+}
+
+.button-md {
+    @apply px-6 text-base leading-normal rounded-md h-[42px];
+}
+
+input[type="text"],
+input[type="email"] {
+    @apply text-b-md px-4 rounded-md bg-white transition-all duration-300 ease-in-out h-[42px];
+    &:hover {
+        border-color: #FDB74D;
+    }
+    &:focus {
+        border-color: #F67D00;
+        @apply ring-0;
+    }
+}
+
+.logo-shadow {
+    box-shadow: 0 0 13px 16px #FFFFFF;
+}

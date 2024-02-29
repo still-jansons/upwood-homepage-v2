@@ -1,113 +1,127 @@
-import Image from 'next/image'
+import HeroBlock from "@/app/components/HeroBlock";
+import Image from "next/image";
+import InvitationFormSection from "@components/InvitationFormSection";
+import TextElement from "@components/TextElement";
+import QuoteElement from "@components/QuoteElement";
+import Section from "@components/Section";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    return (
+        <main>
+            <HeroBlock
+                title    = {'Socially responsible investment'}
+                subtitle = {'Invest in European land and forest plantations'}
+                hasForm
             />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            
+            {/*  Text section  */}
+            <Section id={'section-2'}>
+                <div className={'max-w-2xl mx-auto flex flex-col gap-16'}>
+                    <TextElement
+                        title = "Humanity needs to act now"
+                        body  = "The urgency of addressing climate change has led humanity to seek for more sustainable and ethical investment opportunities. Forests, known as Earth's lungs, offer a compelling solution. They not only generate high returns with low risk, sequester vast amounts of carbon dioxide but also preserve rich biodiversity, stabilize ecosystems, and provide countless ecosystem services."
+                    />
+                    
+                    <TextElement
+                        title = "We want to save the planet"
+                        body  = "We plant the trees and take care of the land! It isn't merely a financial venture; it's a commitment to ecological regeneration. Our mission is to increase and maintain healthy forest and agricultural land areas. As the land and forests under our care thrive, they increase in a value, benefiting investors through the appreciation of their assets and income from profit generating activities. We are passionate about planting, maintaining, managing and offering environmentally friendly investments."
+                    />
+                    
+                    <QuoteElement
+                        quote = "Our vision is to change the way we think about our finances, by prioritising sustainable capital growth."
+                    />
+                </div>
+            </Section>
+            
+            {/*  Video section  */}
+            <Section>
+                <div className={'mx-auto max-w-5xl flex flex-col items-center gap-8'}>
+                    <h2 className={'text-h-md text-white font-bold'}>And how we do it matters</h2>
+                    <iframe
+                        className   = "mx-auto w-full aspect-video rounded-3xl overflow-hidden drop-shadow-xl"
+                        width       = "560"
+                        height      = "auto"
+                        src         = "https://www.youtube.com/embed/JNCiZqtdOxY?si=x_zLhCF7enfypjtq&amp;controls=0"
+                        title       = "YouTube video player"
+                        allow       = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        frameBorder = "0"
+                        allowFullScreen
+                    ></iframe>
+                </div>
+            </Section>
+            
+            {/*  Partners section  */}
+            <Section>
+                <div className={'flex flex-col items-center gap-20'}>
+                    <h2 className={'text-h-md font-bold text-white'}>Upwood partners</h2>
+                    <div className={'flex gap-20 flex-wrap justify-center'}>
+                        { [1, 2, 3, 4, 5, 6].map((item, index) => (
+                            <div
+                                key       = {index}
+                                className = {'h-36 w-36 rounded-full overflow-hidden bg-white flex items-center justify-center p-2 logo-shadow'}
+                            >
+                                <Image
+                                    src       = {`/upwood.svg`}
+                                    alt       = "Partner"
+                                    width     = {200}
+                                    height    = {200}
+                                    quality   = {100}
+                                    className = "object-contain w-full h-full"
+                                />
+                            </div>
+                        )) }
+                    </div>
+                </div>
+            </Section>
+            
+            {/*  Press section  */}
+            <section>
+                <div className="max-w-screen-xl mx-auto px-4 md:px-10 py-16 md:py-24">
+                    <div className={'flex flex-col items-center gap-20'}>
+                        <h2 className={'text-h-md font-bold text-white'}>Read about Upwood in press</h2>
+                        <div className={'flex gap-20 flex-wrap justify-center'}>
+                            { [1, 2, 3].map((item, index) => (
+                                <div
+                                    key       = {index}
+                                    className = {'h-36 w-36 rounded-full overflow-hidden bg-white flex items-center justify-center p-2 logo-shadow'}
+                                >
+                                    <Image
+                                        src       = {`/upwood.svg`}
+                                        alt       = "Partner"
+                                        width     = {200}
+                                        height    = {200}
+                                        quality   = {100}
+                                        className = "object-contain w-full h-full"
+                                    />
+                                </div>
+                            )) }
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            {/*  Footer form section  */}
+            <section className={'relative'}>
+                <div className="absolute inset-0 -z-10">
+                    <Image
+                        src       = "/images/forest.webp"
+                        alt       = "Hero"
+                        className = "object-cover object-top w-full h-full"
+                        width     = {1920}
+                        height    = {1080}
+                        quality   = {100}
+                    />
+                </div>
+                <div className="max-w-screen-xl mx-auto px-4 md:px-10 py-16 md:py-24">
+                    <div className={'flex flex-col items-center gap-12'}>
+                        <div className={'text-center flex flex-col items-center gap-4'}>
+                            <h2 className={'text-h-lg font-bold text-white'}>Exclusive investment community</h2>
+                            <p className={'max-w-2xl text-b-lg text-white'}>As UN stated “there is no future without addressing climate change”. We created like-minded investor community to address climate change by planting more forests and preserving environmentally friendly assets. Our investor community enjoy early access to attractive investment offerings, ability to pool resources together to crowdfund through fractional ownership and have access to personal investment management cabinet.</p>
+                        </div>
+                        <InvitationFormSection />
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
 }
