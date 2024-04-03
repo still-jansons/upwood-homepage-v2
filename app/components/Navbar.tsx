@@ -43,8 +43,8 @@ export default function Navbar() {
     <nav
       className={`fixed left-0 right-0 top-0 z-50 bg-gradient-to-b from-black to-transparent transition-all duration-300 ${isOpen ? "open" : "max-h-20 overflow-hidden"}`}
     >
-      <div className="wrapper mx-auto flex h-screen max-w-screen-xl flex-col gap-20 px-4 md:h-20 md:items-center md:justify-between md:gap-8 md:px-10">
-        <div className="flex h-20 w-full items-center">
+      <div className="wrapper mx-auto flex h-screen max-w-screen-xl flex-col gap-20 px-4 md:h-20 md:flex-row md:items-center md:justify-between md:gap-8 md:px-10">
+        <div className="flex h-20 w-full items-center md:w-auto">
           <Link href="/">
             <Image
               src="/upwood.svg"
@@ -56,7 +56,7 @@ export default function Navbar() {
             />
           </Link>
           <button
-            className="ml-auto flex aspect-square h-12 items-center justify-center bg-transparent"
+            className="ml-auto flex aspect-square h-12 items-center justify-center bg-transparent md:hidden"
             onClick={() => setOpen(!isOpen)}
           >
             <Image
@@ -68,8 +68,8 @@ export default function Navbar() {
             />
           </button>
         </div>
-        <div className="relative flex w-full items-center gap-8">
-          <ul className="flex w-full flex-col items-center gap-8">
+        <div className="relative flex w-full items-center gap-8 md:w-auto">
+          <ul className="flex w-full flex-col items-center gap-8 md:flex-row">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link
