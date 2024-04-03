@@ -33,7 +33,10 @@ export default function HeroBlock({
                     </p>
                 </div>
                 { hasForm && (
-                    <InvitationFormSection title={'Enquire more information'} />
+                    <InvitationFormSection
+                        section = "header"
+                        title   = "Enquire more information"
+                    />
                 )}
             </div>
             <a

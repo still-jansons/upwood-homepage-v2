@@ -5,7 +5,7 @@ import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 
 export const metadata: Metadata = {
-    title: "Upwood",
+    title      : "Upwood",
     description: "Upwood is built with Next.js",
 };
 

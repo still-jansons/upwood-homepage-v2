@@ -112,3 +112,73 @@ export async function submitInvitation(
         }
     }
 }
+
+export async function submitNewsletter(
+    prevState: { message: string, status: string },
+    formData : FormData
+): Promise<{ message: string, status: string }> {
+    const data = {
+        email         : formData.get('email'),
+        agreementCheck: formData.get('agreementCheck'),
+    }
+    
+    // Check if the email is already in the newsletter
+    try {
+        await new Promise((resolve, reject) =>
+            base(process.env.AIRTABLE_TABLE_NEWSLETTER!).select({
+                view: 'Grid view',
+                filterByFormula: `{fldg00CuaSL0pRAfP} = '${data.email}'`
+            }).firstPage((err, records) => {
+                if (err) {
+                    reject('Something went wrong. Please try again later.')
+                    return
+                }
+                
+                if (records && records.length > 0) {
+                    reject( 'Email is already registered!')
+                    return
+                }
+                
+                resolve(true)
+            })
+        )
+    } catch (error: any) {
+        return {
+            message: error,
+            status : 'error'
+        }
+    }
+    
+    // Insert the new record
+    try {
+        await new Promise((resolve, reject) => {
+            base(process.env.AIRTABLE_TABLE_NEWSLETTER!).create([
+                {
+                    // @ts-ignore
+                    fields: {
+                        'fldg00CuaSL0pRAfP': data.email,
+                        'flda6TxdSX94YF0wA': 'Todo',
+                    }
+                }
+            
+            ], function (err: any) {
+                if (err) {
+                    reject('Something went wrong. Please try again later.')
+                    return
+                }
+                
+                resolve(true)
+            })
+        })
+        
+        return {
+        message: 'Newsletter subscription successful',
+            status : 'success'
+        }
+    } catch (error: any) {
+        return {
+            message: error,
+            status : 'error'
+        }
+    }
+}

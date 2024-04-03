@@ -100,3 +100,11 @@ input[type="email"] {
 .logo-shadow {
     box-shadow: 0 0 13px 16px #FFFFFF;
 }
+
+.react-aria-Popover[data-trigger=Select] {
+    width: var(--trigger-width);
+}
+
+.react-aria-ListBoxItem[data-focus-visible], .react-aria-ListBoxItem[data-focused] {
+    @apply outline-none;
+}
