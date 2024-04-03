@@ -24,7 +24,10 @@ html {
 }
 
 .link {
-    @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[#FDB74D] hover:drop-shadow-md active:shadow-none active:text-[#FF9900] focus:text-[#91E704];
+    @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[#FDB74D] hover:drop-shadow-md active:shadow-none active:text-[#FF9900] focus:text-[#91E704] font-bold md:opacity-100;
+    @apply text-[34px] leading-[34px] text-center;
+    @apply md:text-base md:leading-4 md:text-left;
+    @apply transition-all duration-300 ease-in-out;
     &.active {
         @apply text-[#FF9900];
     }
@@ -107,4 +110,12 @@ input[type="email"] {
 
 .react-aria-ListBoxItem[data-focus-visible], .react-aria-ListBoxItem[data-focused] {
     @apply outline-none;
+}
+
+nav {
+    &.open {
+        background-color: rgba(6, 53, 11, .5);
+        backdrop-filter: blur(10px);
+        @apply max-h-screen;
+    }
 }

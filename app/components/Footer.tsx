@@ -32,22 +32,22 @@ const socialLinks = [
     {
         title: 'Instagram',
         href: 'https://www.instagram.com/upwood.io',
-        logo: '/images/ig-logo.svg'
+        logo: '/icons/ig-logo.svg'
     },
     {
         title: 'Facebook',
         href: 'https://www.facebook.com/upwood.io',
-        logo: '/images/fb-logo.svg'
+        logo: '/icons/fb-logo.svg'
     },
     {
         title: 'Youtube',
         href: 'https://www.youtube.com/upwood.io',
-        logo: '/images/yt-logo.svg'
+        logo: '/icons/yt-logo.svg'
     },
     {
         title: 'TikTok',
         href: 'https://www.tiktok.com/upwood.io',
-        logo: '/images/tt-logo.svg'
+        logo: '/icons/tt-logo.svg'
     }
 ]
 

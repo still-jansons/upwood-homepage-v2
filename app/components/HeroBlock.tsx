@@ -23,7 +23,7 @@ export default function HeroBlock({
                     quality   = {100}
                 />
             </div>
-            <div className="max-w-screen-xl mx-auto px-4 md:px-10 flex flex-col justify-center items-center gap-12 flex-1">
+            <div className="max-w-3xl mx-auto px-4 md:px-10 flex flex-col justify-center items-center gap-12 flex-1">
                 <div className="text-center flex flex-col gap-4">
                     <h1 className="text-h-lg font-bold text-white font-lexend">
                         {title}
@@ -46,7 +46,7 @@ export default function HeroBlock({
                     className = {'text-b-md text-white font-bold'}
                 >See more</p>
                 <Image
-                    src       = "/images/arrow-down.svg"
+                    src       = "/icons/arrow-down.svg"
                     alt       = "Arrow"
                     width     = {40}
                     height    = {40}
