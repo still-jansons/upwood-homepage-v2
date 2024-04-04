@@ -24,9 +24,8 @@ html {
 }
 
 .link {
-    @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[#FDB74D] hover:drop-shadow-md active:shadow-none active:text-[#FF9900] focus:text-[#91E704] font-bold md:opacity-100;
-    @apply text-[34px] leading-[34px] text-center;
-    @apply md:text-base md:leading-4 md:text-left;
+    @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[#FDB74D] hover:drop-shadow-md active:shadow-none active:text-[#FF9900] focus:text-[#91E704] font-bold;
+    @apply text-base leading-4 text-left;
     @apply transition-all duration-300 ease-in-out;
     &.active {
         @apply text-[#FF9900];
@@ -69,7 +68,7 @@ html {
     @apply text-sm leading-normal;
 }
 
-button {
+.button {
     @apply rounded-md text-black font-bold border border-transparent disabled:opacity-50 transition-all duration-300 ease-in-out bg-[#FF9900] subpixel-antialiased;
     &:hover:not(:disabled) {
         background: #FDB74D;
@@ -90,7 +89,12 @@ button {
 
 input[type="text"],
 input[type="email"] {
-    @apply text-b-md px-4 rounded-md bg-white transition-all duration-300 ease-in-out h-[42px];
+    @apply h-[42px]
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    @apply text-b-md px-4 rounded-lg bg-white transition-all duration-300 ease-in-out;
     &:hover {
         border-color: #FDB74D;
     }
@@ -98,6 +102,7 @@ input[type="email"] {
         border-color: #F67D00;
         @apply ring-0;
     }
+
 }
 
 .logo-shadow {
@@ -113,6 +118,11 @@ input[type="email"] {
 }
 
 nav {
+    .link {
+        @apply md:opacity-100;
+        @apply text-[34px] leading-[34px] text-center;
+        @apply md:text-base md:leading-4 md:text-left;
+    }
     &.open {
         background-color: rgba(6, 53, 11, .5);
         backdrop-filter: blur(10px);
