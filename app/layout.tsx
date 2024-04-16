@@ -3,7 +3,7 @@ import { roboto, lexendDeca } from "@styles/fonts";
 import "@styles/globals.css";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
-import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
+import { storyblokInit, apiPlugin } from "@storyblok/react";
 import StoryblokBridgeLoader from "@storyblok/react/bridge-loader";
 
 import HeroSection from "@components/HeroSection";
