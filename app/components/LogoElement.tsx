@@ -1,22 +1,53 @@
 import Image from "next/image";
+import { ISbStoriesParams, SbBlokData } from "@storyblok/react";
 
 export default function LogoElement({
-    image,
-    alt
+  blok,
 }: {
-    image: string,
-    alt  : string,
+  blok: {
+    image: SbBlokData;
+    link?: SbBlokData;
+  };
 }) {
-    return (
-        <div className={'h-36 w-36 rounded-full overflow-hidden bg-white flex items-center justify-center p-2.5 logo-shadow'}>
+  return (
+    <>
+      {blok.link?.url ? (
+        <a
+          href={blok.link.url as string}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            className={
+              "logo-shadow flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-white p-1"
+            }
+          >
             <Image
-                src       = {image}
-                alt       = {alt}
-                width     = {200}
-                height    = {200}
-                quality   = {100}
-                className = "h-full w-full object-contain"
+              src={blok.image.filename as string}
+              alt={blok.image.alt as string}
+              width={150}
+              height={150}
+              quality={100}
+              className="h-full w-full rounded-full object-contain"
             />
+          </div>
+        </a>
+      ) : (
+        <div
+          className={
+            "logo-shadow flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-white p-1"
+          }
+        >
+          <Image
+            src={blok.image.filename as string}
+            alt={blok.image.alt as string}
+            width={150}
+            height={150}
+            quality={100}
+            className="h-full w-full rounded-full object-contain"
+          />
         </div>
-    );
+      )}
+    </>
+  );
 }

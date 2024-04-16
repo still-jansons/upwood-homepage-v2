@@ -1,12 +1,21 @@
-import HeroBlock from "@components/HeroBlock";
+import {
+  getStoryblokApi,
+  ISbStoriesParams,
+  ISbStory,
+  StoryblokComponent,
+} from "@storyblok/react";
 
-export default function Learn() {
-    return (
-        <main>
-            <HeroBlock
-                title    = "Learn"
-                subtitle = "Learn about the benefits of investing in forests."
-            />
-        </main>
-    )
+async function getData() {
+  let sbParams: ISbStoriesParams = {
+    version: "draft",
+  };
+
+  const storyblok = getStoryblokApi();
+  return storyblok.get("cdn/stories/learn", sbParams, { cache: "no-store" });
+}
+
+export default async function Learn() {
+  const { data } = (await getData()) as ISbStory;
+
+  return <StoryblokComponent blok={data.story.content} />;
 }

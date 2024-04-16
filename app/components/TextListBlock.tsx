@@ -1,15 +1,16 @@
 import React from "react";
+import { SbBlokData, StoryblokComponent } from "@storyblok/react";
 
-export default function TextListBlock(
-    {
-        children
-    }: {
-        children: React.ReactNode
-    }
-) {
-    return (
-        <div className="max-w-2xl mx-auto flex flex-col gap-16">
-            { children }
-        </div>
-    );
+type ExtendedSbBlokData = SbBlokData & {
+  blocks: SbBlokData[];
+};
+
+export default function TextListBlock({ blok }: { blok: ExtendedSbBlokData }) {
+  return (
+    <div className="mx-auto flex max-w-2xl flex-col gap-16">
+      {blok.blocks.map((nestedBlok) => (
+        <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+      ))}
+    </div>
+  );
 }

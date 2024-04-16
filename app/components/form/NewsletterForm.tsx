@@ -13,7 +13,7 @@ let initialState = {
   status: "",
 };
 
-export default function InvitationForm() {
+export default function NewsletterForm() {
   const [state, formAction] = useFormState(submitNewsletter, initialState);
   const [email, setEmail] = useState("");
   const [agreement, setAgreement] = useState(false);

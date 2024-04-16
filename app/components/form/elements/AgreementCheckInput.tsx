@@ -14,7 +14,7 @@ export function AgreementCheckInput({
   const { pending } = useFormStatus();
 
   return (
-    <div className={`flex gap-2`}>
+    <div className={`flex gap-2 ${className}`}>
       <input
         id={`agreementCheck-${section}`}
         name="agreementCheck"

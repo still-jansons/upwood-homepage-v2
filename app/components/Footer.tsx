@@ -57,12 +57,10 @@ export default function Footer() {
       <div className={"flex flex-col items-center gap-10"}>
         <div
           className={
-            "mx-auto flex w-full max-w-screen-xl flex-col items-start justify-between gap-12 px-4 pt-8 md:flex-row md:gap-20 md:px-10"
+            "mx-auto flex w-full max-w-screen-xl flex-wrap items-start justify-between gap-12 px-4 pt-8 md:px-10 lg:gap-20"
           }
         >
-          <div
-            className={"text-b-md flex flex-col gap-2 font-normal text-white"}
-          >
+          <div className="text-b-md order-1 flex w-full flex-1 flex-col gap-2 font-normal text-white">
             <p>SIA “Upwood”</p>
             <p>Reg. No. 4445554465</p>
             <a href="mailto:info@upwood.io" className={"link w-fit"}>
@@ -73,11 +71,7 @@ export default function Footer() {
               <br /> Riga, Latvia, <br /> LV-1048
             </p>
           </div>
-          <ul
-            className={
-              "flex h-36 flex-col flex-wrap gap-x-12 gap-y-4 font-bold md:h-36"
-            }
-          >
+          <ul className="order-3 flex h-36 w-auto flex-col flex-wrap gap-x-12 gap-y-4 font-bold md:h-36 md:w-full lg:order-2 lg:max-w-[320px]">
             {routes.map((route, index) => (
               <li key={index}>
                 <Link key={index} href={route.href} className={"link"}>
@@ -86,7 +80,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <ul className={"flex flex-wrap gap-y-4"}>
+          <ul className="order-4 flex w-auto flex-wrap gap-y-4 md:w-full lg:order-3 lg:max-w-[250px]">
             {socialLinks.map((link, index) => (
               <li key={index} className={"w-[50%]"}>
                 <a
@@ -112,6 +106,18 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+          <div className="order-2 lg:order-4">
+            <Link href="/">
+              <Image
+                src="/upwood.svg"
+                alt="Upwood"
+                width="165"
+                height="37"
+                className="h-8 w-auto"
+                quality={100}
+              />
+            </Link>
+          </div>
         </div>
         <div>
           <p className={"text-b-sm max-w-2xl px-4 text-center text-white"}>
