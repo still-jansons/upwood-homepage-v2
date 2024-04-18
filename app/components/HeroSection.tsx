@@ -20,7 +20,7 @@ export default function HeroSection({ blok }: { blok: ExtendedSbBlokData }) {
         <Image
           src="/images/forest-full.webp"
           alt="Hero"
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-bottom"
           width={1920}
           height={1080}
           quality={100}
