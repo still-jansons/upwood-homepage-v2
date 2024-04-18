@@ -19,7 +19,7 @@ export function AgreementCheckInput({
         id={`agreementCheck-${section}`}
         name="agreementCheck"
         type="checkbox"
-        className="checked:ring-none mt-0.5 h-4 w-4 rounded border-transparent text-[#F67D00] accent-red-500 transition-colors duration-300 ease-in-out hover:border-[#F67D00] focus:ring-0"
+        className="checked:ring-none mt-0.5 h-4 w-4 rounded border-transparent text-[var(--color-primary-dark)] accent-red-500 transition-colors duration-300 ease-in-out hover:border-[#F67D00] focus:ring-0"
         disabled={disabled || pending}
         onChange={(e) => setAgreement(e.target.checked)}
         required
