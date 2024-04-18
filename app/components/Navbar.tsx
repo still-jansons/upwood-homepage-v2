@@ -96,7 +96,7 @@ export default function Navbar() {
           {/*                <ListBoxItem*/}
           {/*                    id={item.id}*/}
           {/*                    className={({ isSelected }) => `*/}
-          {/*                        ${isSelected ? "bg-[#FF9900] text-black" : "text-white hover:bg-white/10"}*/}
+          {/*                        ${isSelected ? "bg-[var(--color-primary)] text-black" : "text-white hover:bg-white/10"}*/}
           {/*                        px-2 py-2 text-base leading-4 cursor-pointer text-white font-medium transition-all duration-300 ease-in-out !ring-0 !border-none ring-offset-transparent hover:!border-none hover:!ring-0*/}
           {/*                    `}*/}
           {/*                >{item.label}</ListBoxItem>*/}
