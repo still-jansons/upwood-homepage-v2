@@ -20,6 +20,7 @@ import ProfileListBlock from "@components/ProfileListBlock";
 import ProfileElement from "@components/ProfileElement";
 import NewsletterForm from "@components/form/NewsletterForm";
 import FAQSection from "@components/FaqSection";
+import LearnSection from "@components/LearnSection";
 
 export const metadata: Metadata = {
   title: "Upwood",
@@ -44,6 +45,7 @@ storyblokInit({
     profileListElement: ProfileElement,
     newsletterForm: NewsletterForm,
     faqSection: FAQSection,
+    learnSection: LearnSection,
   },
 });
 
