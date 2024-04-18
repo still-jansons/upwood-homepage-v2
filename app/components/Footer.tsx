@@ -18,10 +18,6 @@ const routes = [
     title: "Contacts",
     href: "/contacts",
   },
-  {
-    title: "FAQ",
-    href: "/faq",
-  },
 ];
 
 const socialLinks = [
