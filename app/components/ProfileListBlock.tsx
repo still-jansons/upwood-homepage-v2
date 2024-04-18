@@ -1,5 +1,5 @@
 import React from "react";
-import { SbBlokData, StoryblokComponent } from "@storyblok/react";
+import { SbBlokData, StoryblokComponent } from "@storyblok/react/rsc";
 
 export default function ProfileListBlock({
   blok,

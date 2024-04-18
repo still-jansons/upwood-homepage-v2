@@ -1,7 +1,7 @@
 import Image from "next/image";
 import InvitationFormSection from "@components/form/InvitationFormSection";
 import ContactForm from "@components/form/ContactForm";
-import { SbBlokData, storyblokEditable } from "@storyblok/react";
+import { SbBlokData, storyblokEditable } from "@storyblok/react/rsc";
 
 type ExtendedSbBlokData = SbBlokData & {
   title?: string;

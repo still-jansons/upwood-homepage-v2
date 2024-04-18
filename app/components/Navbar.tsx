@@ -19,7 +19,6 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/company", label: "Company" },
   { href: "/business", label: "Business" },
-  { href: "/learn", label: "Learn" },
   { href: "/contacts", label: "Contacts" },
 ];
 

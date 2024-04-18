@@ -3,7 +3,7 @@ import {
   SbBlokData,
   StoryblokComponent,
   storyblokEditable,
-} from "@storyblok/react";
+} from "@storyblok/react/rsc";
 
 type ExtendedSbBlokData = SbBlokData & {
   scrollTarget?: boolean;

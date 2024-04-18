@@ -3,7 +3,7 @@ import { roboto, lexendDeca } from "@styles/fonts";
 import "@styles/globals.css";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
-import { storyblokInit, apiPlugin } from "@storyblok/react";
+import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokBridgeLoader from "@storyblok/react/bridge-loader";
 
 import HeroSection from "@components/HeroSection";
@@ -19,7 +19,6 @@ import FooterFormSection from "@components/FooterFormSection";
 import ProfileListBlock from "@components/ProfileListBlock";
 import ProfileElement from "@components/ProfileElement";
 import NewsletterForm from "@components/form/NewsletterForm";
-import LearnSection from "@components/LearnSection";
 
 export const metadata: Metadata = {
   title: "Upwood",
@@ -43,7 +42,6 @@ storyblokInit({
     profileListBlock: ProfileListBlock,
     profileListElement: ProfileElement,
     newsletterForm: NewsletterForm,
-    learnSection: LearnSection,
   },
 });
 

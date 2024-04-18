@@ -2,7 +2,7 @@ import {
   StoryblokComponent,
   storyblokEditable,
   SbBlokData,
-} from "@storyblok/react";
+} from "@storyblok/react/rsc";
 
 type ExtendedSbBlokData = SbBlokData & {
   blocks: SbBlokData[];

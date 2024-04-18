@@ -3,7 +3,7 @@ import {
   ISbStoriesParams,
   StoryblokClient,
   StoryblokComponent,
-} from "@storyblok/react";
+} from "@storyblok/react/rsc";
 
 export default async function Company() {
   const { data } = await fetchData();

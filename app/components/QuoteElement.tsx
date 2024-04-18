@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { storyblokEditable } from "@storyblok/react";
+import { storyblokEditable } from "@storyblok/react/rsc";
 
 export default function QuoteElement({ blok }: { blok: { quote: string } }) {
   return (

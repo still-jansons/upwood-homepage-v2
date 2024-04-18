@@ -15,10 +15,6 @@ const routes = [
     href: "/business",
   },
   {
-    title: "Learn",
-    href: "/learn",
-  },
-  {
     title: "Contacts",
     href: "/contacts",
   },

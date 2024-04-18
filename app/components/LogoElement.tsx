@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ISbStoriesParams, SbBlokData } from "@storyblok/react";
+import { SbBlokData } from "@storyblok/react/rsc";
 
 export default function LogoElement({
   blok,
