@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-primary: #FF9900;
+    --color-primary-light: #FDB74D;
+    --color-primary-dark: #F67D00;
+    --color-text-shadow: #8F5600;
+}
+
 html {
     @apply antialiased;
 
@@ -24,11 +31,11 @@ html {
 }
 
 .link {
-    @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[#FDB74D] hover:drop-shadow-md active:shadow-none active:text-[#FF9900] focus:text-[#91E704] font-bold;
+    @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[var(--color-primary-light)] hover:drop-shadow-md active:shadow-none active:text-[var(--color-primary)] focus:text-[#91E704] font-bold;
     @apply text-base leading-4 text-left;
     @apply transition-all duration-300 ease-in-out;
     &.active {
-        @apply text-[#FF9900];
+        @apply text-[var(--color-primary)];
     }
 }
 
@@ -69,17 +76,17 @@ html {
 }
 
 .button {
-    @apply rounded-md text-black font-bold border border-transparent disabled:opacity-50 transition-all duration-300 ease-in-out bg-[#FF9900] subpixel-antialiased;
+    @apply rounded-md text-black font-bold border border-transparent disabled:opacity-50 transition-all duration-300 ease-in-out bg-[var(--color-primary)] subpixel-antialiased;
     &:hover:not(:disabled) {
-        background: #FDB74D;
+        background: var(--color-primary-light);
         @apply drop-shadow-lg;
     }
     &:active:not(:disabled) {
-        background: #F67D00;
+        background: var(--color-primary-dark);
         @apply shadow-none;
     }
     &:focus:not(:disabled) {
-        background: #FF9900;
+        background: var(--color-primary);
     }
 }
 
@@ -96,10 +103,10 @@ input[type="email"],
 textarea {
     @apply text-b-md px-4 rounded-lg bg-white transition-all duration-300 ease-in-out;
     &:hover {
-        border-color: #FDB74D;
+        border-color: var(--color-primary-light);
     }
     &:focus {
-        border-color: #F67D00;
+        border-color: var(--color-primary-dark);
         @apply ring-0;
     }
 
@@ -128,4 +135,16 @@ nav {
         backdrop-filter: blur(10px);
         @apply max-h-screen;
     }
+}
+
+.text-3d {
+    color: var(--color-primary);
+    text-shadow: 1px 0 0 var(--color-text-shadow),
+    2px 0 0 var(--color-text-shadow),
+    3px 0 0 var(--color-text-shadow),
+    4px 0 0 var(--color-text-shadow),
+    5px 0 0 var(--color-text-shadow),
+    6px 0 0 var(--color-text-shadow),
+    7px 0 0 var(--color-text-shadow),
+    8px 0 0 var(--color-text-shadow)
 }
