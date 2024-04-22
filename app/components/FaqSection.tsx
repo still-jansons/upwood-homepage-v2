@@ -1,11 +1,5 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import {
-  getStoryblokApi,
-  ISbStoriesParams,
-  StoryblokClient,
-  storyblokEditable,
-} from "@storyblok/react/rsc";
+import { storyblokEditable } from "@storyblok/react/rsc";
 import FAQListBlock from "@components/FaqListBlock";
 
 export default async function FAQSection({
