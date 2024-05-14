@@ -112,8 +112,13 @@ textarea {
 
 }
 
-.logo-shadow {
-    box-shadow: 0 0 13px 16px #FFFFFF;
+.logo-shadow::before {
+    content: "";
+    box-shadow: 0 0 14px 16px #FFFFFF;
+    position: absolute;
+    inset: 1px;
+    background: transparent;
+    border-radius: 50%;
 }
 
 .react-aria-Popover[data-trigger=Select] {
