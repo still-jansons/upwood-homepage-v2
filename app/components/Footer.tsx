@@ -37,7 +37,7 @@ const socialLinks = [
   },
   {
     title: "Youtube",
-    href: "https://www.youtube.com/upwood.io",
+    href: "http://www.youtube.com/@Upwood_io",
     logo: "/icons/yt-logo.svg",
   },
   {
@@ -58,7 +58,7 @@ export default function Footer() {
         >
           <div className="text-b-md order-1 flex w-full flex-1 flex-col gap-2 font-normal text-white">
             <p>SIA “Upwood”</p>
-            <p>Reg. No. 4445554465</p>
+            <p>Reg. No. 40203494875</p>
             <a href="mailto:info@upwood.io" className={"link w-fit"}>
               info@upwood.io
             </a>
