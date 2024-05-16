@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    {"source": "/(.*)", "destination": "/_not-found"}
+    {"source": "/(.*)", "destination": "/"}
   ]
 
 }
