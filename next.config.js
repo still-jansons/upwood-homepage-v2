@@ -4,7 +4,7 @@ const nextConfig = {
     serverMinification: false,
   },
   i18n: {
-    locales: ["en", "lv"],
+    locales: ["en"],
     defaultLocale: "en",
   },
   images: {
