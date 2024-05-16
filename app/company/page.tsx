@@ -19,7 +19,5 @@ async function fetchData() {
 
   const storyblokApi: StoryblokClient = getStoryblokApi();
 
-  return storyblokApi.get("cdn/stories/company", sbParams, {
-    cache: "no-store",
-  });
+  return storyblokApi.get("cdn/stories/company", sbParams);
 }
