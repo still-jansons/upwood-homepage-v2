@@ -12,7 +12,7 @@ export default async function FAQ() {
   return <StoryblokComponent blok={data.story.content} />;
 }
 
-async function fetchData() {
+export async function fetchData() {
   initStoryblok();
   let sbParams: ISbStoriesParams = { version: "draft" };
 

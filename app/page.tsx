@@ -12,11 +12,13 @@ export default async function Home() {
   return <StoryblokComponent blok={data.story.content} />;
 }
 
-async function fetchData() {
+export async function fetchData() {
   initStoryblok();
   let sbParams: ISbStoriesParams = { version: "draft" };
 
   const storyblokApi: StoryblokClient = getStoryblokApi();
 
-  return storyblokApi.get("cdn/stories/home", sbParams, { cache: "no-store" });
+  return storyblokApi.get("cdn/stories/home", sbParams, {
+    cache: "no-store",
+  });
 }
