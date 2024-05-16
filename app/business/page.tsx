@@ -8,12 +8,12 @@ import { initStoryblok } from "@/src/storyblok";
 import StoryblokStory from "@storyblok/react/story";
 
 export default async function Business() {
-  const { data } = await getData();
+  const { data } = await fetchData();
 
   return <StoryblokStory story={data.story} />;
 }
 
-async function getData() {
+async function fetchData() {
   initStoryblok();
   let sbParams: ISbStoriesParams = { version: "draft" };
 

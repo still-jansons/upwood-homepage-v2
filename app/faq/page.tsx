@@ -8,12 +8,12 @@ import {
 import { initStoryblok } from "@/src/storyblok";
 
 export default async function FAQ() {
-  const { data } = await getData();
+  const { data } = await fetchData();
 
   return <StoryblokStory story={data.story} />;
 }
 
-export async function getData() {
+async function fetchData() {
   initStoryblok();
   let sbParams: ISbStoriesParams = { version: "draft" };
 
