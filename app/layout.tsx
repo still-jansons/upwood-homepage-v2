@@ -7,8 +7,9 @@ import StoryblokBridgeLoader from "@storyblok/react/bridge-loader";
 import StoryblokProvider from "@components/StoryblokProvider";
 
 export const metadata: Metadata = {
-  title: "Upwood",
-  description: "Upwood is built with love",
+  title: "Green stocks",
+  description:
+    "Socially responsible investment in highly profitable nature preservation project digital shares.",
 };
 
 export default function RootLayout({
