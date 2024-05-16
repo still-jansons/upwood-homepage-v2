@@ -7,12 +7,12 @@ import {
 import { initStoryblok } from "@/src/storyblok";
 
 export default async function Company() {
-  const { data } = await fetchData();
+  const { data } = await getData();
 
   return <StoryblokComponent blok={data.story.content} />;
 }
 
-export async function fetchData() {
+async function getData() {
   initStoryblok();
   let sbParams: ISbStoriesParams = { version: "draft" };
 
