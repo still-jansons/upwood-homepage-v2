@@ -4,6 +4,7 @@ import "@styles/globals.css";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import StoryblokBridgeLoader from "@storyblok/react/bridge-loader";
+import StoryblokProvider from "@components/StoryblokProvider";
 
 export const metadata: Metadata = {
   title: "Upwood",
@@ -19,10 +20,9 @@ export default function RootLayout({
     <html lang="en" className={`${roboto.variable} ${lexendDeca.variable}`}>
       <body>
         <Navbar />
-        {children}
+        <StoryblokProvider>{children}</StoryblokProvider>
         <Footer />
       </body>
-      <StoryblokBridgeLoader options={{}} />
     </html>
   );
 }

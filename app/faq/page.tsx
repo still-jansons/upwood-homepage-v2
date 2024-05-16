@@ -3,16 +3,17 @@ import {
   ISbStoriesParams,
   StoryblokClient,
   StoryblokComponent,
+  StoryblokStory,
 } from "@storyblok/react/rsc";
 import { initStoryblok } from "@/src/storyblok";
 
 export default async function FAQ() {
   const { data } = await getData();
 
-  return <StoryblokComponent blok={data.story.content} />;
+  return <StoryblokStory story={data.story} />;
 }
 
-async function getData() {
+export async function getData() {
   initStoryblok();
   let sbParams: ISbStoriesParams = { version: "draft" };
 

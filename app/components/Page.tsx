@@ -8,12 +8,12 @@ type ExtendedSbBlokData = SbBlokData & {
   blocks: SbBlokData[];
 };
 
-export default function Page({ blok }: { blok: ExtendedSbBlokData }) {
-  return (
-    <main {...storyblokEditable(blok)}>
-      {blok.blocks.map((nestedBlok) => (
-        <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-      ))}
-    </main>
-  );
-}
+const Page = ({ blok }: { blok: ExtendedSbBlokData }) => (
+  <main {...storyblokEditable(blok)}>
+    {blok.blocks.map((nestedBlok) => (
+      <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+    ))}
+  </main>
+);
+
+export default Page;
