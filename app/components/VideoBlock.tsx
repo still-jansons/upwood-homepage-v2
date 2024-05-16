@@ -21,6 +21,7 @@ export default function VideoBlock({
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         frameBorder="0"
         allowFullScreen
+        loading="lazy"
       ></iframe>
     </div>
   );
