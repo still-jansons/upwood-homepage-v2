@@ -126,7 +126,7 @@ export default function Footer() {
             any investment product. Investment involves risk is not indicative
             of future performance. Investors should refer to the offering
             documentation of the projects for detailed information (including
-            risk factors) prior to investing.{" "}
+            risk factors) prior to investing.
           </p>
         </div>
         <div
