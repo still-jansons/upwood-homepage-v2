@@ -22,6 +22,10 @@ const routes = [
     title: "FAQ",
     href: "/faq",
   },
+  {
+    title: "Privacy",
+    href: "/privacy-policy",
+  },
 ];
 
 const socialLinks = [
@@ -41,9 +45,9 @@ const socialLinks = [
     logo: "/icons/yt-logo.svg",
   },
   {
-    title: "TikTok",
-    href: "https://www.tiktok.com/upwood.io",
-    logo: "/icons/tt-logo.svg",
+    title: "Telegram",
+    href: "https://t.me/+S1rip4Mj9Xg4M2Y0",
+    logo: "/icons/tg-logo.svg",
   },
 ];
 
@@ -94,7 +98,7 @@ export default function Footer() {
                       width={20}
                       height={20}
                       quality={100}
-                      className="h-full w-full object-contain"
+                      className="h-4 w-4"
                     />
                   </span>
                   {link.title}
@@ -119,10 +123,10 @@ export default function Footer() {
           <p className={"text-b-sm max-w-2xl px-4 text-center text-white"}>
             The content of this webpage is not an investment advice and does not
             constitute any offer or solicitation to offer or recommendation of
-            any investment product. Investment involves risk. Past performance
-            is not indicative of future performance. Investors should refer to
-            the offering documentation of the projects for detailed information
-            (including risk factors) prior to investing.{" "}
+            any investment product. Investment involves risk is not indicative
+            of future performance. Investors should refer to the offering
+            documentation of the projects for detailed information (including
+            risk factors) prior to investing.{" "}
           </p>
         </div>
         <div

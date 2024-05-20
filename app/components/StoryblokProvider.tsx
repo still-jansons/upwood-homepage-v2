@@ -16,6 +16,7 @@ import ProfileListBlock from "@components/ProfileListBlock";
 import ProfileElement from "@components/ProfileElement";
 import NewsletterForm from "@components/form/NewsletterForm";
 import FAQSection from "@components/FaqSection";
+import PrivacyPage from "@components/PrivacyPage";
 
 /** 3. Initialize it as usual */
 initStoryblok({
@@ -34,6 +35,7 @@ initStoryblok({
     profileListElement: ProfileElement,
     newsletterForm: NewsletterForm,
     faqSection: FAQSection,
+    privacyPage: PrivacyPage,
   },
 });
 
