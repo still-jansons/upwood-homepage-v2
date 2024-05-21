@@ -36,7 +36,7 @@ export default function NewsletterForm() {
           <SubmitButton
             disabled={!valid || state.status === "success"}
             className="order-3 md:order-2"
-            label="Request"
+            label="Submit"
           />
           <AgreementCheckInput
             key="newsletter"
