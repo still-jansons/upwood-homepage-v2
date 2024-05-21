@@ -1,4 +1,5 @@
 import { useFormStatus } from "react-dom";
+import Link from "next/link";
 
 export function AgreementCheckInput({
   section = "default",
@@ -31,7 +32,10 @@ export function AgreementCheckInput({
       >
         By entering your email you agree to receive marketing communications
         from SIA Upwood. You can unsubscribe at any time. For more information,
-        see our Privacy Policy
+        see our
+        <Link href={"/privacy"} className="ml-1 underline">
+          Privacy Policy
+        </Link>
       </label>
     </div>
   );
