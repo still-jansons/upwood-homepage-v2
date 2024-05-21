@@ -8,6 +8,7 @@ import { AgreementCheckInput } from "@components/form/elements/AgreementCheckInp
 import { EmailInput } from "@components/form/elements/EmailInput";
 import { ReferralCodeInput } from "@components/form/elements/ReferralCodeInput";
 import { Alert } from "@components/form/elements/Alert";
+import { InvestInput } from "@components/form/elements/InvestInput";
 
 let initialState = {
   message: "",
@@ -37,14 +38,15 @@ export default function InvitationForm({
         <h2 className="text-h-sm text-center font-bold text-white">{title}</h2>
       )}
       <form action={formAction}>
-        <div className="flex flex-wrap gap-y-4 md:gap-x-5 md:gap-y-6">
+        <div className="flex flex-wrap gap-x-5 gap-y-4 md:gap-y-6">
           <EmailInput
             disabled={state.status === "success"}
             setEmail={setEmail}
             className={"order-1"}
           />
-          <div className={"order-2 w-full md:order-3"}>
+          <div className={"order-2 flex w-full gap-5 md:order-3"}>
             <ReferralCodeInput disabled={state.status === "success"} />
+            <InvestInput disabled={state.status === "success"} />
           </div>
           <SubmitButton
             disabled={!valid || state.status === "success"}
