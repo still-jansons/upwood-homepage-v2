@@ -18,10 +18,12 @@ export default function ProfileElement({
         width={200}
         height={200}
         quality={100}
-        className="h-full w-full rounded-xl object-contain shadow-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-xl"
+        className="h-full w-full rounded-xl object-cover shadow-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-xl"
       />
       <div className="flex flex-col items-center gap-2.5">
-        <p className="text-h-xs font-bold text-white">{blok.title}</p>
+        <p className="text-h-xs whitespace-nowrap text-center font-bold text-white">
+          {blok.title}
+        </p>
         <p className="text-b-lg font-normal text-white">{blok.description}</p>
       </div>
     </div>
