@@ -1,13 +1,13 @@
 import { useFormStatus } from "react-dom";
 
-export function ReferralCodeInput({ disabled }: { disabled: boolean }) {
+export function InvestInput({ disabled }: { disabled: boolean }) {
   const { pending } = useFormStatus();
 
   return (
     <input
-      name="referralCode"
-      type="text"
-      placeholder="Referral code (optional)"
+      name="investAmount"
+      type="number"
+      placeholder="Desired investment amount € (optional)"
       className="flex-1 disabled:opacity-70"
       disabled={disabled || pending}
     />

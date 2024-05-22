@@ -8,8 +8,7 @@ import StoryblokProvider from "@components/StoryblokProvider";
 
 export const metadata: Metadata = {
   title: "Green stocks",
-  description:
-    "Socially responsible investment in highly profitable nature preservation project digital shares.",
+  description: "Invest in European carbon offset and removal projects",
 };
 
 export default function RootLayout({

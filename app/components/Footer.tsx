@@ -24,7 +24,7 @@ const routes = [
   },
   {
     title: "Privacy",
-    href: "/privacy-policy",
+    href: "/privacy",
   },
 ];
 
@@ -67,8 +67,7 @@ export default function Footer() {
               info@upwood.io
             </a>
             <p>
-              <b>Offce:</b> “Philosophers residence”, <br /> Raņķa Dambis 34,{" "}
-              <br /> Riga, Latvia, <br /> LV-1048
+              <b>Offce:</b> Raņķa Dambis 34, <br /> Riga, Latvia, <br /> LV-1048
             </p>
           </div>
           <ul className="order-3 flex h-36 w-auto flex-col flex-wrap gap-x-12 gap-y-4 font-bold md:h-36 md:w-full lg:order-2 lg:max-w-[320px]">
