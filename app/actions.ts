@@ -15,6 +15,7 @@ export async function submitInvitation(
     email: formData.get("email"),
     referralCode: formData.get("referralCode"),
     agreementCheck: formData.get("agreementCheck"),
+    investAmount: Number(formData.get("investAmount")),
   };
 
   // Check if the email is already in the waitlist
@@ -91,6 +92,7 @@ export async function submitInvitation(
             fields: {
               fldyj5YvgFicxxQSb: data.email,
               fldejhv6PB2seeOcE: "Todo",
+              fldkz6ydH5xcB7nc6: data.investAmount,
               fldt2zgfa79qeyLR9: crypto
                 .randomBytes(4)
                 .toString("hex")
