@@ -44,7 +44,11 @@ export default function InvitationForm({
             setEmail={setEmail}
             className={"order-1"}
           />
-          <div className={"order-2 flex w-full gap-5 md:order-3"}>
+          <div
+            className={
+              "order-2 flex w-full flex-wrap gap-x-5 gap-y-4 md:order-3 md:gap-y-6"
+            }
+          >
             <ReferralCodeInput disabled={state.status === "success"} />
             <InvestInput disabled={state.status === "success"} />
           </div>

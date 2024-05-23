@@ -8,7 +8,7 @@ export function ReferralCodeInput({ disabled }: { disabled: boolean }) {
       name="referralCode"
       type="text"
       placeholder="Referral code (optional)"
-      className="flex-1 disabled:opacity-70"
+      className="w-full disabled:opacity-70 sm:flex-1"
       disabled={disabled || pending}
     />
   );

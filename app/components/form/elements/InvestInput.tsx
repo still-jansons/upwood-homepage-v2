@@ -8,7 +8,7 @@ export function InvestInput({ disabled }: { disabled: boolean }) {
       name="investAmount"
       type="number"
       placeholder="Desired investment amount € (optional)"
-      className="flex-1 disabled:opacity-70"
+      className="w-full flex-none disabled:opacity-70 sm:flex-1"
       disabled={disabled || pending}
     />
   );
