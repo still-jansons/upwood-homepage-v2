@@ -1,15 +1,10 @@
-import type { Metadata } from "next";
 import { roboto, lexendDeca } from "@styles/fonts";
 import "@styles/globals.css";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
-import StoryblokBridgeLoader from "@storyblok/react/bridge-loader";
 import StoryblokProvider from "@components/StoryblokProvider";
-
-export const metadata: Metadata = {
-  title: "Green stocks",
-  description: "Invest in European carbon offset and removal projects",
-};
+import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
@@ -18,10 +13,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${roboto.variable} ${lexendDeca.variable}`}>
+      <GoogleTagManager gtmId="GTM-MNX3ZLNL" />
+
       <body>
         <Navbar />
         <StoryblokProvider>{children}</StoryblokProvider>
         <Footer />
+
+        <Script
+          src="https://cdn.cookie-script.com/s/6c2223e53fac6d85d6af2ca3548ef994.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
