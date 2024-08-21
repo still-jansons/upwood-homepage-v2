@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FooterFormSection from "@components/FooterFormSection";
+import FooterFormSection from "@/app/components/sections/FooterFormSection";
 
 export default function NotFound() {
   return (

@@ -8,7 +8,7 @@ type ExtendedSbBlokData = SbBlokData & {
   blocks: SbBlokData[];
 };
 
-export default function Article({ blok }: { blok: ExtendedSbBlokData }) {
+export default function ArticlePage({ blok }: { blok: ExtendedSbBlokData }) {
   return (
     <main {...storyblokEditable(blok)}>
       {blok.blocks.map((nestedBlok) => (
