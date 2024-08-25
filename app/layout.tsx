@@ -4,7 +4,7 @@ import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import StoryblokProvider from "@components/StoryblokProvider";
 import Script from "next/script";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
@@ -25,6 +25,7 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
       </body>
+      <GoogleAnalytics gaId="G-RLLSRZWV4D" />
     </html>
   );
 }
