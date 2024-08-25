@@ -1,35 +1,31 @@
-import { storyblokEditable, ISbStoryData } from "@storyblok/react/rsc";
+import { ISbStoryData, storyblokEditable } from "@storyblok/react/rsc";
+import { motion } from 'framer-motion';
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { StoryblokRichtextContent } from "storyblok-rich-text-react-renderer";
+import ArticlePreviewElement from "@/app/components/elements/ArticlePreviewElement";
+import { Article, ArticleCategory } from "@/app/types/Article";
+import ArticleCategoryFilter from "@components/elements/ArticleCategoryFilterElement";
 
 export default function LearnSection({
   blok,
 }: {
   blok: {
     title: string;
-    articles?: ISbStoryData[] & {
-      content: {
-        title: string;
-        categories: string[];
-        image: ISbStoryData;
-        content: StoryblokRichtextContent;
-      };
-    };
+    articles?: Array<ISbStoryData & {
+      content: Article;
+    }>
   };
 }) {
-  console.log(blok.articles);
+  const [selectedCategory, setSelectedCategory] = useState<ArticleCategory["value"]>(null);
   const [categories, setCategories] = useState<
+    ArticleCategory[]
+  >([
     {
-      dimension_value: null | string;
-      id: number;
-      name: string;
-      value: string;
-    }[]
-  >([]);
-
-  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState<number>(0);
+      id: 0,
+      name: "All",
+      value: null,
+    },
+  ]);
 
   useEffect(() => {
     async function fetchData() {
@@ -37,68 +33,67 @@ export default function LearnSection({
         "https://api.storyblok.com/v2/cdn/datasource_entries?datasource=article-categories&token=TzMQUQIWpJmocPA3X4Ohpgtt";
       const response = await fetch(api);
       const data = await response.json();
-      console.log(data.datasource_entries);
-      setCategories(data.datasource_entries);
+
+      setCategories((prev) => [
+        ...prev,
+        ...data.datasource_entries.filter(
+          (entry: ArticleCategory) =>
+            !prev.some((prevEntry) => prevEntry.value === entry.value)
+        ),
+      ]);
     }
 
     fetchData();
   }, []);
 
+  const filteredArticles = blok.articles?.filter((article) =>
+    selectedCategory
+      ? article.content.categories.includes(selectedCategory)
+      : true
+  ) ?? []
+
   return (
     <section
       {...storyblokEditable(blok)}
-      className="relative flex min-h-screen flex-col gap-10 pt-24 md:gap-0 md:pt-0"
+      className="relative flex flex-col min-h-screen gap-10 md:gap-0"
     >
-      <div className="absolute inset-0 -z-10 h-screen">
+      <div className="absolute inset-0 h-screen -z-10">
         <Image
           src="/images/forest-full.webp"
           alt="Hero"
-          className="h-full w-full object-cover object-top"
+          className="object-cover object-top w-full h-full"
           width={1920}
           height={1080}
           quality={100}
         />
       </div>
-      <div className="mx-auto flex max-w-5xl flex-1 flex-col items-center justify-center gap-16 px-4 py-[25vh] md:px-10">
+      <div className="flex flex-col items-center justify-center flex-1 max-w-5xl gap-16 px-4 py-32 mx-auto md:pt-44 md:px-10">
         <div className="flex flex-col gap-4 text-center">
-          <h1 className="text-h-lg font-lexend font-bold text-white">
+          <h1 className="font-bold text-white text-h-lg font-lexend">
             {blok.title}
           </h1>
-          <div className="flex h-11 justify-center gap-8 border-y border-white px-16">
-            {categories.map((category, index) => (
-              <button
-                key={category.value}
-                className={`cursor-pointer text-base font-bold transition-all duration-150 ease-in ${selectedCategoryIndex === index ? "text-[var(--color-primary)]" : "text-white"}`}
-                onClick={() => setSelectedCategoryIndex(index)}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
+          <ArticleCategoryFilter
+            categories={categories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
         </div>
         <div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {blok.articles?.map((article) => (
-              <Link key={article.id} href={article.full_slug}>
-                <div className="flex h-[350px] flex-col gap-4 rounded-xl bg-[var(--color-secondary)] p-4 drop-shadow-lg">
-                  <Image
-                    src={article.content.image.filename}
-                    alt={article.content.title}
-                    width={300}
-                    height={200}
-                    quality={100}
-                    className="aspect-video h-40 rounded-xl object-cover"
-                  />
-                  <h2 className="text-lg leading-6 text-white">
-                    {article.content.title}
-                  </h2>
-                  <div className="mt-auto text-right text-xs font-bold text-[var(--color-primary)]">
-                    Read more
-                  </div>
-                </div>
-              </Link>
+          <motion.div
+            className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {filteredArticles.map((article) => (
+              <ArticlePreviewElement
+                key={article.id}
+                slug={article.full_slug}
+                article={article.content}
+              />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

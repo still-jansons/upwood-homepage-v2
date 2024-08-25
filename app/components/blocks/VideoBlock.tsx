@@ -11,7 +11,7 @@ export default function VideoBlock({
   return (
     <div
       {...storyblokEditable(blok)}
-      className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8"
+      className="flex flex-col items-center w-full max-w-5xl mx-auto gap-8"
     >
       <div className={"w-full"}>
         <YouTubeEmbed

@@ -17,9 +17,9 @@ export default function Section({ blok }: { blok: ExtendedSbBlokData }) {
       id={blok.scrollTarget ? "section-2" : ""}
       {...storyblokEditable(blok)}
     >
-      <div className="mx-auto flex max-w-screen-xl flex-col gap-12 px-4 py-16 md:gap-14 md:px-10 md:py-28">
+      <div className="flex flex-col px-4 py-16 mx-auto max-w-screen-xl gap-12 md:gap-14 md:px-10 md:py-28">
         {blok.title && (
-          <h2 className="text-h-md text-center font-bold text-white">
+          <h2 className="font-bold text-center text-white text-h-md">
             {blok.title}
           </h2>
         )}

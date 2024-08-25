@@ -17,8 +17,6 @@ export const metadata: Metadata = {
 export default async function Learn() {
   const { data } = await fetchData();
 
-  console.log("LEARN", data.story.content);
-
   return <StoryblokStory story={data.story} />;
 }
 

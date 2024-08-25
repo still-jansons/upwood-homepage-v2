@@ -39,7 +39,7 @@ export default function ContactForm({
     >
       <form action={formAction}>
         <div className="flex flex-wrap gap-y-4 md:gap-x-5 md:gap-y-6">
-          <div className="flex w-full flex-col gap-4 sm:flex-row sm:gap-6">
+          <div className="flex flex-col w-full gap-4 sm:flex-row sm:gap-6">
             <NameInput
               disabled={state.status === "success"}
               setName={setName}

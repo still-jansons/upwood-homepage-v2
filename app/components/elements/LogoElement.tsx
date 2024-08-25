@@ -17,29 +17,29 @@ export default function LogoElement({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="logo-shadow relative h-36 w-36 rounded-full bg-white">
-            <div className="flex h-full w-full items-center justify-center p-1">
+          <div className="relative bg-white rounded-full logo-shadow h-36 w-36">
+            <div className="flex items-center justify-center w-full h-full p-1">
               <Image
                 src={blok.image.filename as string}
                 alt={blok.image.alt as string}
                 width={150}
                 height={150}
                 quality={100}
-                className="h-full w-full rounded-full object-contain"
+                className="object-contain w-full h-full rounded-full"
               />
             </div>
           </div>
         </a>
       ) : (
-        <div className="logo-shadow relative h-36 w-36 rounded-full bg-white">
-          <div className="flex h-full w-full items-center justify-center p-1">
+        <div className="relative bg-white rounded-full logo-shadow h-36 w-36">
+          <div className="flex items-center justify-center w-full h-full p-1">
             <Image
               src={blok.image.filename as string}
               alt={blok.image.alt as string}
               width={150}
               height={150}
               quality={100}
-              className="h-full w-full rounded-full object-contain"
+              className="object-contain w-full h-full rounded-full"
             />
           </div>
         </div>

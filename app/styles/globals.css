@@ -7,7 +7,7 @@
   --color-primary-light: #fdb74d;
   --color-primary-dark: #f67d00;
   --color-text-shadow: #8f5600;
-  --color-secondary: #1D6222;
+  --color-secondary: #1d6222;
 }
 
 html {
@@ -41,18 +41,14 @@ html {
 }
 
 .text-h-lg {
-  @apply
-  text-4xl
-  md:text-5xl;
+  @apply text-4xl md:text-5xl;
 }
 .text-h-md {
-  @apply
-  text-[28px] leading-[33px]
+  @apply text-[28px] leading-[33px]
   md:text-[32px] md:leading-[38px];
 }
 .text-h-sm {
-  @apply
-  text-[22px] leading-[26px]
+  @apply text-[22px] leading-[26px]
   md:text-[24px] md:leading-[28px];
 }
 .text-h-xs {
@@ -98,13 +94,13 @@ html {
 input[type="text"],
 input[type="email"],
 input[type="number"] {
-  @apply h-[42px]
+  @apply h-[42px];
 }
 input[type="text"],
 input[type="email"],
 input[type="number"],
 textarea {
-  @apply text-b-md px-4 rounded-lg bg-white transition-all duration-300 ease-in-out;
+  @apply px-4 transition-all duration-300 ease-in-out bg-white rounded-lg text-b-md;
   &:hover {
     border-color: var(--color-primary-light);
   }
@@ -112,7 +108,6 @@ textarea {
     border-color: var(--color-primary-dark);
     @apply ring-0;
   }
-
 }
 
 .logo-shadow::before {
@@ -124,11 +119,12 @@ textarea {
   border-radius: 50%;
 }
 
-.react-aria-Popover[data-trigger=Select] {
+.react-aria-Popover[data-trigger="Select"] {
   width: var(--trigger-width);
 }
 
-.react-aria-ListBoxItem[data-focus-visible], .react-aria-ListBoxItem[data-focused] {
+.react-aria-ListBoxItem[data-focus-visible],
+.react-aria-ListBoxItem[data-focused] {
   @apply outline-none;
 }
 
@@ -139,7 +135,7 @@ nav {
     @apply md:text-base md:leading-4 md:text-left;
   }
   &.open {
-    background-color: rgba(6, 53, 11, .5);
+    background-color: rgba(6, 53, 11, 0.5);
     backdrop-filter: blur(10px);
     @apply max-h-screen;
   }
@@ -147,14 +143,15 @@ nav {
 
 .text-3d {
   color: var(--color-primary);
-  text-shadow: 1px 0 0 var(--color-text-shadow),
-  2px 0 0 var(--color-text-shadow),
-  3px 0 0 var(--color-text-shadow),
-  4px 0 0 var(--color-text-shadow),
-  5px 0 0 var(--color-text-shadow),
-  6px 0 0 var(--color-text-shadow),
-  7px 0 0 var(--color-text-shadow),
-  8px 0 0 var(--color-text-shadow)
+  text-shadow:
+    1px 0 0 var(--color-text-shadow),
+    2px 0 0 var(--color-text-shadow),
+    3px 0 0 var(--color-text-shadow),
+    4px 0 0 var(--color-text-shadow),
+    5px 0 0 var(--color-text-shadow),
+    6px 0 0 var(--color-text-shadow),
+    7px 0 0 var(--color-text-shadow),
+    8px 0 0 var(--color-text-shadow);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -165,6 +162,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }

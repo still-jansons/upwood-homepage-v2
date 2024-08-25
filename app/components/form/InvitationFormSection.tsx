@@ -33,9 +33,9 @@ export default function InvitationForm({
   }, [email, agreement]);
 
   return (
-    <div className="flex max-w-2xl flex-col gap-6">
+    <div className="flex flex-col max-w-2xl gap-6">
       {title && (
-        <h2 className="text-h-sm text-center font-bold text-white">{title}</h2>
+        <h2 className="font-bold text-center text-white text-h-sm">{title}</h2>
       )}
       <form action={formAction}>
         <div className="flex flex-wrap gap-x-5 gap-y-4 md:gap-y-6">
