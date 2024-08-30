@@ -25,6 +25,7 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
       </body>
+
       <GoogleAnalytics gaId="G-RLLSRZWV4D" />
     </html>
   );
