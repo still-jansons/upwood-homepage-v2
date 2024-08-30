@@ -5,8 +5,8 @@ import {
 } from "@storyblok/react/rsc";
 import Image from "next/image";
 import { render } from "storyblok-rich-text-react-renderer";
-import VideoBlock from "@components/VideoBlock";
-import FooterFormSection from "@components/FooterFormSection";
+import VideoBlock from "@/app/components/blocks/VideoBlock";
+import FooterFormSection from "@/app/components/sections/FooterFormSection";
 
 const PrivacyPage = ({
   blok,
@@ -22,14 +22,14 @@ const PrivacyPage = ({
         <Image
           src="/images/forest-full.webp"
           alt="Hero"
-          className="h-full w-full object-cover object-top"
+          className="object-cover object-top w-full h-full"
           width={1920}
           height={1080}
           quality={100}
         />
       </div>
-      <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center justify-center gap-24 px-4 py-24 md:px-10 md:py-52">
-        <h1 className="text-h-lg font-lexend text-center font-bold text-white">
+      <div className="relative z-10 flex flex-col items-center justify-center max-w-3xl px-4 py-24 mx-auto gap-24 md:px-10 md:py-52">
+        <h1 className="font-bold text-center text-white text-h-lg font-lexend">
           {blok.title}
         </h1>
         <div className="prose prose-stone dark:prose-invert">

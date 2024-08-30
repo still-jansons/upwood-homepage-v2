@@ -2,21 +2,23 @@
 
 /** 2. Import your components */
 import { initStoryblok } from "@/src/storyblok";
-import Page from "@components/Page";
-import HeroSection from "@components/HeroSection";
-import Section from "@components/Section";
-import TextListBlock from "@components/TextListBlock";
-import TextElement from "@components/TextElement";
-import QuoteElement from "@components/QuoteElement";
-import VideoBlock from "@components/VideoBlock";
-import LogoListBlock from "@components/LogoListBlock";
-import LogoElement from "@components/LogoElement";
-import FooterFormSection from "@components/FooterFormSection";
-import ProfileListBlock from "@components/ProfileListBlock";
-import ProfileElement from "@components/ProfileElement";
+import Page from "@/app/components/pages/Page";
+import HeroSection from "@/app/components/sections/HeroSection";
+import Section from "@/app/components/sections/Section";
+import TextListBlock from "@/app/components/blocks/TextListBlock";
+import TextElement from "@/app/components/elements/TextElement";
+import QuoteElement from "@/app/components/elements/QuoteElement";
+import VideoBlock from "@/app/components/blocks/VideoBlock";
+import LogoListBlock from "@/app/components/blocks/LogoListBlock";
+import LogoElement from "@/app/components/elements/LogoElement";
+import FooterFormSection from "@/app/components/sections/FooterFormSection";
+import ProfileListBlock from "@/app/components/blocks/ProfileListBlock";
+import ProfileElement from "@/app/components/elements/ProfileElement";
 import NewsletterForm from "@components/form/NewsletterForm";
-import FAQSection from "@components/FaqSection";
-import PrivacyPage from "@components/PrivacyPage";
+import FAQSection from "@/app/components/sections/FaqSection";
+import PrivacyPage from "@/app/components/pages/PrivacyPage";
+import LearnSection from "@/app/components/sections/LearnSection";
+import ArticlePage from "@components/pages/ArticlePage";
 
 /** 3. Initialize it as usual */
 initStoryblok({
@@ -36,6 +38,8 @@ initStoryblok({
     newsletterForm: NewsletterForm,
     faqSection: FAQSection,
     privacyPage: PrivacyPage,
+    learnSection: LearnSection,
+    articlePage: ArticlePage,
   },
 });
 

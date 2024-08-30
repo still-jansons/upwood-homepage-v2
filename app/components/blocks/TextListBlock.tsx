@@ -7,7 +7,7 @@ type ExtendedSbBlokData = SbBlokData & {
 
 export default function TextListBlock({ blok }: { blok: ExtendedSbBlokData }) {
   return (
-    <div className="mx-auto flex max-w-2xl flex-col gap-16">
+    <div className="flex flex-col max-w-2xl mx-auto gap-16">
       {blok.blocks.map((nestedBlok) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}

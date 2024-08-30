@@ -3,167 +3,165 @@
 @tailwind utilities;
 
 :root {
-    --color-primary: #FF9900;
-    --color-primary-light: #FDB74D;
-    --color-primary-dark: #F67D00;
-    --color-text-shadow: #8F5600;
+  --color-primary: #f90;
+  --color-primary-light: #fdb74d;
+  --color-primary-dark: #f67d00;
+  --color-text-shadow: #8f5600;
+  --color-secondary: #1d6222;
 }
 
 html {
-    @apply antialiased;
+  @apply antialiased;
 
-    scroll-behavior: smooth;
-    font-family    : var(--font-roboto);
-    background     : #05350B;
+  scroll-behavior: smooth;
+  font-family: var(--font-roboto);
+  background: #05350b;
 }
 
 .font-roboto {
-    font-family: var(--font-roboto);
+  font-family: var(--font-roboto);
 }
 
 .font-lexend {
-    font-family: var(--font-lexend);
+  font-family: var(--font-lexend);
 }
 
 .bg-forest {
-    background-image : url("/forest.webp");
-    background-repeat: no-repeat;
+  background-image: url("/forest.webp");
+  background-repeat: no-repeat;
 }
 
 .link {
-    @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[var(--color-primary-light)] hover:drop-shadow-md active:shadow-none active:text-[var(--color-primary)] focus:text-[#91E704] font-bold;
-    @apply text-base leading-4 text-left;
-    @apply transition-all duration-300 ease-in-out;
-    &.active {
-        @apply text-[var(--color-primary)];
-    }
+  @apply text-white transition-all duration-300 ease-in-out outline-none hover:text-[var(--color-primary-light)] hover:drop-shadow-md active:shadow-none active:text-[var(--color-primary)] focus:text-[#91E704] font-bold;
+  @apply text-base leading-4 text-left;
+  @apply transition-all duration-300 ease-in-out;
+  &.active {
+    @apply text-[var(--color-primary)];
+  }
 }
 
 .text-h-lg {
-    @apply
-        text-4xl
-        md:text-5xl;
+  @apply text-4xl md:text-5xl;
 }
 .text-h-md {
-    @apply
-        text-[28px] leading-[33px]
-        md:text-[32px] md:leading-[38px];
+  @apply text-[28px] leading-[33px]
+  md:text-[32px] md:leading-[38px];
 }
 .text-h-sm {
-    @apply
-        text-[22px] leading-[26px]
-        md:text-[24px] md:leading-[28px];
+  @apply text-[22px] leading-[26px]
+  md:text-[24px] md:leading-[28px];
 }
 .text-h-xs {
-    @apply text-[20px] leading-[24px];
+  @apply text-[20px] leading-[24px];
 }
 
 .text-h-lg,
 .text-h-md,
 .text-h-sm,
 .text-h-xs {
-    font-family: var(--font-lexend);
+  font-family: var(--font-lexend);
 }
 
 .text-b-lg {
-    @apply text-lg leading-normal;
+  @apply text-lg leading-normal;
 }
 .text-b-md {
-    @apply text-base leading-normal;
+  @apply text-base leading-normal;
 }
 .text-b-sm {
-    @apply text-sm leading-normal;
+  @apply text-sm leading-normal;
 }
 
 .button {
-    @apply rounded-md text-black font-bold border border-transparent disabled:opacity-50 transition-all duration-300 ease-in-out bg-[var(--color-primary)] subpixel-antialiased;
-    &:hover:not(:disabled) {
-        background: var(--color-primary-light);
-        @apply drop-shadow-lg;
-    }
-    &:active:not(:disabled) {
-        background: var(--color-primary-dark);
-        @apply shadow-none;
-    }
-    &:focus:not(:disabled) {
-        background: var(--color-primary);
-    }
+  @apply rounded-md text-black font-bold border border-transparent disabled:opacity-50 transition-all duration-300 ease-in-out bg-[var(--color-primary)] subpixel-antialiased;
+  &:hover:not(:disabled) {
+    background: var(--color-primary-light);
+    @apply drop-shadow-lg;
+  }
+  &:active:not(:disabled) {
+    background: var(--color-primary-dark);
+    @apply shadow-none;
+  }
+  &:focus:not(:disabled) {
+    background: var(--color-primary);
+  }
 }
 
 .button-md {
-    @apply px-6 text-base leading-normal rounded-md h-[42px];
+  @apply px-6 text-base leading-normal rounded-md h-[42px];
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"] {
-    @apply h-[42px]
+  @apply h-[42px];
 }
 input[type="text"],
 input[type="email"],
 input[type="number"],
 textarea {
-    @apply text-b-md px-4 rounded-lg bg-white transition-all duration-300 ease-in-out;
-    &:hover {
-        border-color: var(--color-primary-light);
-    }
-    &:focus {
-        border-color: var(--color-primary-dark);
-        @apply ring-0;
-    }
-
+  @apply px-4 transition-all duration-300 ease-in-out bg-white rounded-lg text-b-md;
+  &:hover {
+    border-color: var(--color-primary-light);
+  }
+  &:focus {
+    border-color: var(--color-primary-dark);
+    @apply ring-0;
+  }
 }
 
 .logo-shadow::before {
-    content: "";
-    box-shadow: 0 0 14px 16px #FFFFFF;
-    position: absolute;
-    inset: 1px;
-    background: transparent;
-    border-radius: 50%;
+  content: "";
+  box-shadow: 0 0 14px 16px #fff;
+  position: absolute;
+  inset: 1px;
+  background: transparent;
+  border-radius: 50%;
 }
 
-.react-aria-Popover[data-trigger=Select] {
-    width: var(--trigger-width);
+.react-aria-Popover[data-trigger="Select"] {
+  width: var(--trigger-width);
 }
 
-.react-aria-ListBoxItem[data-focus-visible], .react-aria-ListBoxItem[data-focused] {
-    @apply outline-none;
+.react-aria-ListBoxItem[data-focus-visible],
+.react-aria-ListBoxItem[data-focused] {
+  @apply outline-none;
 }
 
 nav {
-    .link {
-        @apply md:opacity-100;
-        @apply text-[34px] leading-[34px] text-center;
-        @apply md:text-base md:leading-4 md:text-left;
-    }
-    &.open {
-        background-color: rgba(6, 53, 11, .5);
-        backdrop-filter: blur(10px);
-        @apply max-h-screen;
-    }
+  .link {
+    @apply md:opacity-100;
+    @apply text-[34px] leading-[34px] text-center;
+    @apply md:text-base md:leading-4 md:text-left;
+  }
+  &.open {
+    background-color: rgba(6, 53, 11, 0.5);
+    backdrop-filter: blur(10px);
+    @apply max-h-screen;
+  }
 }
 
 .text-3d {
-    color: var(--color-primary);
-    text-shadow: 1px 0 0 var(--color-text-shadow),
+  color: var(--color-primary);
+  text-shadow:
+    1px 0 0 var(--color-text-shadow),
     2px 0 0 var(--color-text-shadow),
     3px 0 0 var(--color-text-shadow),
     4px 0 0 var(--color-text-shadow),
     5px 0 0 var(--color-text-shadow),
     6px 0 0 var(--color-text-shadow),
     7px 0 0 var(--color-text-shadow),
-    8px 0 0 var(--color-text-shadow)
+    8px 0 0 var(--color-text-shadow);
 }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }

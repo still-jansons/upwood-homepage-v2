@@ -14,24 +14,24 @@ export default function HeroSection({ blok }: { blok: ExtendedSbBlokData }) {
   return (
     <section
       {...storyblokEditable(blok)}
-      className="relative flex min-h-screen flex-col gap-10 pt-24 md:gap-0 md:pt-0"
+      className="relative flex flex-col min-h-screen pt-24 gap-10 md:gap-0 md:pt-0"
     >
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/forest-full.webp"
           alt="Hero"
-          className="h-full w-full object-cover object-bottom"
+          className="object-cover object-bottom w-full h-full"
           width={1920}
           height={1080}
           quality={100}
         />
       </div>
-      <div className="mx-auto flex max-w-3xl flex-1 flex-col items-center justify-center gap-12 px-4 md:px-10">
-        <div className="flex flex-col gap-4 text-center">
-          <h1 className="text-h-lg font-lexend font-bold text-white">
+      <div className="flex flex-col items-center justify-center flex-1 max-w-3xl px-4 mx-auto gap-12 md:px-10">
+        <div className="flex flex-col text-center gap-4">
+          <h1 className="font-bold text-white text-h-lg font-lexend">
             {blok.title}
           </h1>
-          <p className="text-h-md font-lexend font-bold text-white">
+          <p className="font-bold text-white text-h-md font-lexend">
             {blok.subtitle}
           </p>
         </div>

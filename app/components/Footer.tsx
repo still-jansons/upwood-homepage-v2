@@ -60,7 +60,7 @@ export default function Footer() {
             "mx-auto flex w-full max-w-screen-xl flex-wrap items-start justify-between gap-12 px-4 pt-8 md:px-10 lg:gap-20"
           }
         >
-          <div className="text-b-md order-1 flex w-full flex-1 flex-col gap-2 font-normal text-white">
+          <div className="flex flex-col flex-1 order-1 w-full font-normal text-white text-b-md gap-2">
             <p>SIA “Upwood”</p>
             <p>Reg. No. 40203494875</p>
             <a href="mailto:info@upwood.io" className={"link w-fit"}>
@@ -97,7 +97,7 @@ export default function Footer() {
                       width={20}
                       height={20}
                       quality={100}
-                      className="h-4 w-4"
+                      className="w-4 h-4"
                     />
                   </span>
                   {link.title}
@@ -112,7 +112,7 @@ export default function Footer() {
                 alt="Upwood"
                 width="165"
                 height="37"
-                className="h-8 w-auto"
+                className="w-auto h-8"
                 quality={100}
               />
             </Link>

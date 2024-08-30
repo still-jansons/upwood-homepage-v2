@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FooterFormSection from "@components/FooterFormSection";
+import FooterFormSection from "@/app/components/sections/FooterFormSection";
 
 export default function NotFound() {
   return (
@@ -9,13 +9,13 @@ export default function NotFound() {
           <Image
             src="/images/forest-full.webp"
             alt="Hero"
-            className="h-full w-full object-cover object-top"
+            className="object-cover object-top w-full h-full"
             width={1920}
             height={1080}
             quality={100}
           />
         </div>
-        <div className="relative z-10 mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center gap-12 px-4 md:px-10">
+        <div className="relative z-10 flex flex-col items-center justify-center max-w-3xl min-h-screen px-4 mx-auto gap-12 md:px-10">
           <div>
             <h1 className="font-lexend text-3d text-center text-[250px] font-normal leading-[250px] text-white">
               404

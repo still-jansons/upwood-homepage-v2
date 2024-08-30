@@ -25,7 +25,7 @@ export default function NewsletterForm() {
   }, [email, agreement]);
 
   return (
-    <div className="mx-auto flex max-w-2xl flex-col gap-6">
+    <div className="flex flex-col max-w-2xl mx-auto gap-6">
       <form action={formAction}>
         <div className="flex flex-wrap gap-y-4 md:gap-x-5 md:gap-y-6">
           <EmailInput

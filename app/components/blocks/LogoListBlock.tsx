@@ -15,7 +15,7 @@ export default function LogoListBlock({
   return (
     <div
       {...storyblokEditable(blok)}
-      className="mx-auto flex w-full max-w-6xl flex-wrap justify-center gap-20"
+      className="flex flex-wrap justify-center w-full max-w-6xl mx-auto gap-20"
     >
       {blok.blocks.map((nestedBlok, index) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
