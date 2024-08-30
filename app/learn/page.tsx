@@ -24,7 +24,7 @@ async function fetchData() {
   initStoryblok();
   let sbParams: ISbStoriesParams = { version: "draft" };
   let articleParams: ISbStoriesParams = {
-    version: "draft",
+    version: process.env.ENVIRONMENT === "prod" ? "published" : "draft",
     starts_with: "learn",
     is_startpage: false,
   };

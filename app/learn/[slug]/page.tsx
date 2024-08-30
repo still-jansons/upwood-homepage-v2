@@ -1,5 +1,9 @@
 import { initStoryblok } from "@/src/storyblok";
-import { getStoryblokApi, ISbStoryData, StoryblokClient } from "@storyblok/react/rsc";
+import {
+  getStoryblokApi,
+  ISbStoryData,
+  StoryblokClient,
+} from "@storyblok/react/rsc";
 import StoryblokStory from "@storyblok/react/story";
 
 export async function generateStaticParams() {
@@ -8,10 +12,10 @@ export async function generateStaticParams() {
   const storyblokApi: StoryblokClient = getStoryblokApi();
 
   const articles = await storyblokApi.get("cdn/stories", {
-    version: "draft",
+    version: process.env.ENVIRONMENT === "prod" ? "published" : "draft",
     starts_with: "learn",
     is_startpage: false,
-  })
+  });
 
   return articles.data.stories.map((article: ISbStoryData) => ({
     slug: article.slug,
@@ -19,13 +23,13 @@ export async function generateStaticParams() {
 }
 
 export default async function Article({
-  params
+  params,
 }: {
   params: {
-    slug: string
-  }
+    slug: string;
+  };
 }) {
-  const { slug } = params
+  const { slug } = params;
 
   const data = await fetchData(slug);
 
@@ -37,8 +41,8 @@ async function fetchData(slug: string) {
 
   const storyblokApi: StoryblokClient = getStoryblokApi();
   const { data } = await storyblokApi.get(`cdn/stories/learn/${slug}`, {
-    version: "draft",
-  })
+    version: process.env.ENVIRONMENT === "prod" ? "published" : "draft",
+  });
 
   return data;
 }
