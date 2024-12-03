@@ -1,5 +1,4 @@
 import {
-  StoryblokComponent,
   storyblokEditable,
   SbBlokData,
 } from "@storyblok/react/rsc";

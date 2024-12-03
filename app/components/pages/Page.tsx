@@ -1,5 +1,5 @@
 import {
-  StoryblokComponent,
+  StoryblokServerComponent,
   storyblokEditable,
   SbBlokData,
 } from "@storyblok/react/rsc";
@@ -9,9 +9,9 @@ type ExtendedSbBlokData = SbBlokData & {
 };
 
 const Page = ({ blok }: { blok: ExtendedSbBlokData }) => (
-  <main {...storyblokEditable(blok)}>
+  <main {...storyblokEditable(blok)} key={blok._uid}>
     {blok.blocks.map((nestedBlok) => (
-      <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+      <StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
     ))}
   </main>
 );

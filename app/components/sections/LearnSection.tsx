@@ -1,3 +1,5 @@
+'use client';
+
 import { ISbStoryData, storyblokEditable } from "@storyblok/react/rsc";
 import { motion } from 'framer-motion';
 import Image from "next/image";

@@ -1,8 +1,8 @@
 "use client";
 
-import { useFormState } from "react-dom";
+// import { useFormState } from "react-dom";
 import { submitContact } from "@/app/actions";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useActionState } from "react";
 import { AgreementCheckInput } from "@components/form/elements/AgreementCheckInput";
 import { SubmitButton } from "@components/form/elements/SubmitButton";
 import { EmailInput } from "@components/form/elements/EmailInput";
@@ -20,7 +20,7 @@ export default function ContactForm({
 }: {
   hasBackground?: boolean;
 }) {
-  const [state, formAction] = useFormState(submitContact, initialState);
+  const [state, formAction] = useActionState(submitContact, initialState);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");

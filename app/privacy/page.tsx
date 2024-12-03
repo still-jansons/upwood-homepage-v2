@@ -2,9 +2,9 @@ import {
   getStoryblokApi,
   ISbStoriesParams,
   StoryblokClient,
+  StoryblokStory,
 } from "@storyblok/react/rsc";
-import { initStoryblok } from "@/src/storyblok";
-import StoryblokStory from "@storyblok/react/story";
+import { initStoryblok } from "@/app/lib/storyblok";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

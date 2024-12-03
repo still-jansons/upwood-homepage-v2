@@ -2,11 +2,10 @@ import {
   getStoryblokApi,
   ISbStoriesParams,
   StoryblokClient,
+  StoryblokStory,
 } from "@storyblok/react/rsc";
-import { initStoryblok } from "@/src/storyblok";
-import StoryblokStory from "@storyblok/react/story";
+import { initStoryblok } from "@/app/lib/storyblok";
 import { Metadata } from "next";
-import { ISbStoryData } from "@storyblok/react";
 
 export const metadata: Metadata = {
   title: "Upwood | ESG investment in forests and carbon credits for companies",

@@ -1,8 +1,8 @@
 "use client";
 
-import { useFormState } from "react-dom";
+// import { useFormState } from "react-dom";
 import { submitNewsletter } from "@/app/actions";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useActionState } from "react";
 import { AgreementCheckInput } from "@components/form/elements/AgreementCheckInput";
 import { SubmitButton } from "@components/form/elements/SubmitButton";
 import { EmailInput } from "@components/form/elements/EmailInput";
@@ -14,7 +14,7 @@ let initialState = {
 };
 
 export default function NewsletterForm() {
-  const [state, formAction] = useFormState(submitNewsletter, initialState);
+  const [state, formAction] = useActionState(submitNewsletter, initialState);
   const [email, setEmail] = useState("");
   const [agreement, setAgreement] = useState(false);
   const [valid, setValid] = useState(false);

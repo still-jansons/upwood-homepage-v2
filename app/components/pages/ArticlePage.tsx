@@ -1,6 +1,6 @@
 import { Article } from "@/app/types/Article";
 import {
-  StoryblokComponent,
+  StoryblokServerComponent,
   storyblokEditable,
   SbBlokData,
 } from "@storyblok/react/rsc";
@@ -26,7 +26,7 @@ export default function ArticlePage({ blok }: { blok: SbBlokData & Article }) {
       </div>
 
       {(blok.blocks ?? []).map((nestedBlok) => (
-        <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+        <StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
     </main>
   );

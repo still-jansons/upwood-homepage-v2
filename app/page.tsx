@@ -1,10 +1,10 @@
 import {
   getStoryblokApi,
-  ISbStoriesParams,
-  StoryblokClient,
   StoryblokStory,
+  ISbStoriesParams,
+  StoryblokClient
 } from "@storyblok/react/rsc";
-import { initStoryblok } from "@/src/storyblok";
+import { initStoryblok } from "@/app/lib/storyblok";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default async function Home() {
   );
 }
 
-async function fetchData() {
+function fetchData() {
   initStoryblok();
   let sbParams: ISbStoriesParams = { version: "draft" };
 

@@ -1,10 +1,10 @@
-import { initStoryblok } from "@/src/storyblok";
+import { initStoryblok } from "@/app/lib/storyblok";
 import {
   getStoryblokApi,
   ISbStoryData,
   StoryblokClient,
+  StoryblokStory,
 } from "@storyblok/react/rsc";
-import StoryblokStory from "@storyblok/react/story";
 
 export async function generateStaticParams() {
   initStoryblok();

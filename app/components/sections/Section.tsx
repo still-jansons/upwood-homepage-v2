@@ -1,7 +1,7 @@
 import React from "react";
 import {
   SbBlokData,
-  StoryblokComponent,
+  StoryblokServerComponent,
   storyblokEditable,
 } from "@storyblok/react/rsc";
 
@@ -24,7 +24,7 @@ export default function Section({ blok }: { blok: ExtendedSbBlokData }) {
           </h2>
         )}
         {blok.blocks.map((nestedBlok) => (
-          <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+          <StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
         ))}
       </div>
     </section>

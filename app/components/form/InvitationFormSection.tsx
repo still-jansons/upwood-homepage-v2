@@ -1,8 +1,8 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+// import { useFormState } from "react-dom";
 import { submitInvitation } from "@/app/actions";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useActionState } from "react";
 import { SubmitButton } from "@components/form/elements/SubmitButton";
 import { AgreementCheckInput } from "@components/form/elements/AgreementCheckInput";
 import { EmailInput } from "@components/form/elements/EmailInput";
@@ -22,7 +22,7 @@ export default function InvitationForm({
   title?: string;
   section?: string;
 }) {
-  const [state, formAction] = useFormState(submitInvitation, initialState);
+  const [state, formAction] = useActionState(submitInvitation, initialState);
   const [email, setEmail] = useState("");
   const [agreement, setAgreement] = useState(false);
   const [valid, setValid] = useState(false);

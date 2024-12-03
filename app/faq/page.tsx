@@ -4,7 +4,7 @@ import {
   StoryblokClient,
   StoryblokStory,
 } from "@storyblok/react/rsc";
-import { initStoryblok } from "@/src/storyblok";
+import { initStoryblok } from "@/app/lib/storyblok";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
