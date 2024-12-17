@@ -8,10 +8,11 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  reactStrictMode: true,
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: "/:path*",
         headers: securityHeaders,
       },
     ];
